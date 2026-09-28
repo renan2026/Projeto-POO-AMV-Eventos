@@ -35,7 +35,7 @@ class Veiculo:
         print(f"Veículo {self.placa} cadastrado.")
 
     def atualizar(self, placa=None, modelo=None, capacidade=None):
-        if capacidade is not None and capacidade <= 0: # Modificado para aceitar apenas números positivos
+        if capacidade is not None and capacidade <= 0: 
             raise ValueError("A capacidade deve ser um número positivo.")
         if placa is not None:
             self.placa = placa
@@ -76,8 +76,8 @@ class ItemEntrega:
         self.material = material
 
     def adicionar(self, qtd):
-        if qtd <= 0: # Modificado para aceitar apenas números positivos
-            raise ValueError("A quantidade a ser adicionada deve ser positiva.") # Não aceita numero negativo
+        if qtd <= 0: 
+            raise ValueError("A quantidade a ser adicionada deve ser positiva.") 
         self.quantidade += qtd
         print(f"Adicionados {qtd} itens. Total atual: {self.quantidade}")
     def remover(self, qtd):
